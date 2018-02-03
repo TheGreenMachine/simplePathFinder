@@ -2,10 +2,10 @@ plugins {
     id "java"
     id "eclipse"
     id "idea"
-    id "jaci.openrio.gradle.GradleRIO" version "2017.11.27"
+    id "jaci.openrio.gradle.GradleRIO" version "2018.01.22"
 }
 
-def TEAM = 5333
+def TEAM = 1816
 def ROBOT_CLASS = "frc.team1816.robot.Robot"
 
 // Define my targets (RoboRIO) and artifacts (deployable files)
@@ -29,6 +29,10 @@ dependencies {
     compile wpilib()
     compile ctre()
     compile navx()
+    compile files('../../../Downloads/ThingworxClientSDK/lib/thingworx-common-development.server.build-b595.jar')
+    compile files('../../../Downloads/ThingworxClientSDK/lib/thingworx-communications-client-development.server.build-b595.jar')
+    compile files('../../../Downloads/ThingworxClientSDK/lib/slf4j-api-1.7.21.jar')
+    compile files('../../../Downloads/ThingworxClientSDK/lib/netty-all-4.0.47.Final.jar')
 }
 
 // Setting up my Jar File. In this case, adding all libraries into the main jar ('fat jar')
